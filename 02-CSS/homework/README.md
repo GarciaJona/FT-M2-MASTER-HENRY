@@ -22,9 +22,13 @@ A partir de una paǵina que simula una noticia sobre _Música 8D_ es necesario t
 
 #### Configuración de LESS (Preprocessador)
 
-* Ejecutar `npm install` para instalar less y less-watch-compiler
+* Verificar si ya se encuentra instalado LESS: Si al ejecutar el comando `lessc --version` les devuelve algo similar a `lessc 3.11.1 (Less Compiler) [JavaScript]` es porque ya lo tienen instalado.
 
-* Desde la carpeta del proyecto `responsive-web` ejecutar el siguiente comando: `npm run less`. Esto va a hacer que quede un watcher corriendo de fondo esperando por los cambios que efectuen en el archivo `index.less` para compilarlo a codigo CSS y almacenarlo en el archivo `index.css`.
+* Si no se encuentra instalado LESS: Ejecutar el siguiente comando en la consola `npm install -g less`
+
+* Instalar less-watch-compiler: Ejecutar el siguiente comando en la consola `npm install -g less-watch-compiler`
+
+* Desde la carpeta del proyecto `responsive-web` ejecutar el siguiente comando: `less-watch-compiler less css index.less`
 
 * Verificar que el compilador esté funcionando correctamente, para ello colocar la propiedad `background-color` del elemento `html` a `red` en el archivo `index.less` que se encuentra dentro de la carpeta `less`. Si actualizamos ahora la página, el fondo debería haberse cambiado a rojo
 
@@ -53,7 +57,7 @@ A partir de una paǵina que simula una noticia sobre _Música 8D_ es necesario t
 
 * Observar cómo debe quedar el [diseño final para Desktop](responsive-web/diseño/home-desktop.png). Es necesario crear la barra de navegación y la imagen del header que están faltando. En el archivo `index.html` se indica en que partes debe ir cada uno
 
-* Utilizar el archivo `navigation.less` para darle el estilo correspondiente a la barra de navegación
+* Utilizar el archivo `navigation.less` para darle el estilo correspondiente a la barra de navegación 
 
 * Utilizar el archivo `home-page.less` para darle el estilo correspondiente a la imagen del header
 
